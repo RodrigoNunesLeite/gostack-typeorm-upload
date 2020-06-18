@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add -D @types/typeorm
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add -D typescript @types/typeorm
 
 PATH: 
   C:\Users\Rodrigo\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\Rodrigo\bin;C:\Program Files\Java\jdk-11.0.7\bin;C:\Python27;C:\Python27\Scripts;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\Program Files (x86)\Common Files\lenovo\easyplussdk\bin;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\Yarn\bin;C:\Program Files\Git\cmd;C:\Program Files\nodejs;C:\WINDOWS\System32\OpenSSH;C:\Users\Rodrigo\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Rodrigo\AppData\Local\Yarn\bin;C:\Program Files\Docker Toolbox;C:\Users\Rodrigo\AppData\Roaming\npm;C:\Android\Sdk\platform-tools;C:\Android\Sdk\tools;C:\Users\Rodrigo\AppData\Local\GitHubDesktop\bin;C:\Users\Rodrigo\AppData\Local\Microsoft\WindowsApps;C:\Program Files\heroku\bin;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
@@ -55,6 +55,7 @@ npm manifest:
       "@types/express-serve-static-core": "4.17.2",
       "@types/jest": "^25.2.1",
       "@types/multer": "^1.4.2",
+      "@types/node": "^14.0.13",
       "@types/supertest": "^2.0.8",
       "@typescript-eslint/eslint-plugin": "^2.27.0",
       "@typescript-eslint/parser": "^2.27.0",
@@ -71,7 +72,7 @@ npm manifest:
       "ts-jest": "^25.3.1",
       "ts-node": "3.3.0",
       "ts-node-dev": "^1.0.0-pre.44",
-      "typescript": "^3.8.3"
+      "typescript": "^3.9.5"
     }
   }
 
@@ -683,6 +684,11 @@ Lockfile:
     version "13.11.1"
     resolved "https://registry.yarnpkg.com/@types/node/-/node-13.11.1.tgz#49a2a83df9d26daacead30d0ccc8762b128d53c7"
     integrity sha512-eWQGP3qtxwL8FGneRrC5DwrJLGN4/dH1clNTuLfN81HCrxVtxRjygDTUoZJ5ASlDEeo0ppYFQjQIlXhtXpOn6g==
+  
+  "@types/node@^14.0.13":
+    version "14.0.13"
+    resolved "https://registry.yarnpkg.com/@types/node/-/node-14.0.13.tgz#ee1128e881b874c371374c1f72201893616417c9"
+    integrity sha512-rouEWBImiRaSJsVA+ITTFM6ZxibuAlTuNOCyxVbwreu6k6+ujs7DfnU9o+PShFhET78pMBl3eH+AGSI5eOTkPA==
   
   "@types/prettier@^1.19.0":
     version "1.19.1"
@@ -5450,10 +5456,10 @@ Lockfile:
       yargonaut "^1.1.2"
       yargs "^13.2.1"
   
-  typescript@^3.8.3:
-    version "3.8.3"
-    resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.8.3.tgz#409eb8544ea0335711205869ec458ab109ee1061"
-    integrity sha512-MYlEfn5VrLNsgudQTVJeNaQFUAI7DkhnOjdpAp4T+ku1TfQClewlbSuTVHiA+8skNBgaf02TL/kLOvig4y3G8w==
+  typescript@^3.9.5:
+    version "3.9.5"
+    resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.9.5.tgz#586f0dba300cde8be52dd1ac4f7e1009c1b13f36"
+    integrity sha512-hSAifV3k+i6lEoCJ2k6R2Z/rp/H3+8sdmcn5NrS3/3kE7+RyZXm9aqvxWqjEXHAd8b0pShatpcdMTvEdvAJltQ==
   
   union-value@^1.0.0:
     version "1.0.1"
