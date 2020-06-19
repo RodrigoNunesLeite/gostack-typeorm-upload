@@ -1,10 +1,10 @@
-// import AppError from '../errors/AppError';
-
-import { getCustomRepository } from 'typeorm';
+import { getCustomRepository, getRepository } from 'typeorm';
+import AppError from '../errors/AppError';
 
 import TransactionsRepository from '../repositories/TransactionsRepository';
 
 import Transaction from '../models/Transaction';
+import Category from '../models/Category';
 
 interface Request {
   title: string;
@@ -21,11 +21,39 @@ class CreateTransactionService {
     category,
   }: Request): Promise<Transaction> {
     const transactionsRepository = getCustomRepository(TransactionsRepository);
+    const categoryRepository = getRepository(Category);
+
+    const { total } = await transactionsRepository.getBalance();
+
+    if (type === 'outcome' && total < value) {
+      throw new AppError('You do not have enough balance');
+    }
+
+    // Verificar se a categoria já existe
+    let transactionCategory = await categoryRepository.findOne({
+      where: {
+        title: category,
+      },
+    });
+
+    /** Se a categoria ainda não existir */
+    if (!transactionCategory) {
+      /**
+       * Logo após criar o registro, a variavel
+       * transactionCategory recebe o id criado
+       */
+      transactionCategory = categoryRepository.create({
+        title: category,
+      });
+
+      await categoryRepository.save(transactionCategory);
+    }
 
     const transaction = transactionsRepository.create({
       title,
       value,
       type,
+      category: transactionCategory,
     });
 
     await transactionsRepository.save(transaction);
